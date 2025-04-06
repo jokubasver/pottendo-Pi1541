@@ -125,7 +125,7 @@ enum PIGPIO
 	// 2 I2C_SDA		//3
 	// 3 I2C_CLK		//5
 	PIGPIO_IN_BUTTON4 = 4,	// 07 Common
-	PIGPIO_IN_BUTTON5 = 5,	// 29 Common
+	PIGPIO_IN_BUTTON5 = 9,	// 29 Common
 	//PIGPIO_OUT_RESET = 6,	// 31 
 	PIGPIO_OUT_SPI0_RS = 6,	// 31 
 	// 7 SPI0_CS1		//26
@@ -137,18 +137,18 @@ enum PIGPIO
 	PIGPIO_OUT_SOUND = 13,	// 33 Common
 	// 14 TX			//8
 	// 15 RX			//10
-	PIGPIO_OUT_LED = 16,	// 36 Common
+	PIGPIO_OUT_LED = 8,	// 36 Common
 	PIGPIO_OUT_CLOCK = 17,	// 11
 	PIGPIO_OUT_DATA = 18,	// 12
 	PIGPIO_OUT_SRQ = 19,	// 35
 	PIGPIO_IN_RESET = 20,	// 38
 	PIGPIO_IN_SRQ = 21,		// 40
-	PIGPIO_IN_BUTTON2 = 22,	// 15 Common
-	PIGPIO_IN_BUTTON3 = 23,	// 16 Common
+	PIGPIO_IN_BUTTON2 = 15,	// 15 Common
+	PIGPIO_IN_BUTTON3 = 10,	// 16 Common
 	PIGPIO_IN_ATN = 24,		// 18
 	PIGPIO_IN_DATA = 25,	// 22
 	PIGPIO_IN_CLOCK = 26,	// 37
-	PIGPIO_IN_BUTTON1 = 27	// 13 Common
+	PIGPIO_IN_BUTTON1 = 14	// 13 Common
 #endif
 };
 #else/* HAS4-PINS */
