@@ -139,8 +139,8 @@ void SSD1306::SetDataPointer(u8 page, u8 col)
 	if (col > width-1) { col = width-1; }
 	if (page > height/8-1) { page = height/8-1; }
 
-	if (type == LCD_1106_128x64)
-		col += 2;	// sh1106 uses columns 2..129
+	//if (type == LCD_1106_128x64)
+	//	col += 2;	// sh1106 uses columns 2..129
 
 	SendCommand(SSD1306_CMD_SET_PAGE | page);		// 0xB0 page address
 	SendCommand(SSD1306_CMD_SET_COLUMN_LOW | (col & 0xf));	// 0x00 column address lower bits
