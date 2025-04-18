@@ -440,7 +440,7 @@ public:
 			gpio_set_direction((gpio_num_t)PIGPIO_OUT_SOUND, GPIO_MODE_OUTPUT);
 #endif/* ESP32 */
 #if !defined(__PICO2__) && !defined(ESP32)
-			myOutsGPFSEL1 |= (1 << ((PIGPIO_OUT_LED - 10) * 3));
+			myOutsGPFSEL0 |= (1 << (PIGPIO_OUT_LED * 3));
 			myOutsGPFSEL1 |= (1 << ((PIGPIO_OUT_SOUND - 10) * 3));
 			//RPI_SetGpioPinFunction((rpi_gpio_pin_t)PIGPIO_OUT_SOUND, FS_OUTPUT);
 			//RPI_SetGpioPinFunction((rpi_gpio_pin_t)PIGPIO_OUT_LED, FS_OUTPUT);
@@ -694,6 +694,7 @@ public:
 
 			unsigned nValue = (myOutsGPFSEL1 & PI_OUTPUT_MASK_GPFSEL1) | outputs;
 			write32(ARM_GPIO_GPFSEL1, nValue);
+			write32(ARM_GPIO_GPFSEL0, myOutsGPFSEL0);
 #else
 			u32 im = 0, om = 0;
 			if (AtnaDataSetToOut || DataSetToOut)
